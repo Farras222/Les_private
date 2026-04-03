@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #FF6B35, #FF8C5A);
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: 550px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Left side styling */
+.left-side {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF6B35, #FF8C5A);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.left-side h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.left-side p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.left-side img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Right side styling */
+.form-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+}
+
+form {
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin: -10px 0 30px;
+    color: #FF6B35;
+    font-weight: 700;
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #FF8C5A;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 140, 90, 0.2);
+}
+
+.input-box input::placeholder {
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.input-box input:focus + i {
+    color: #FF8C5A;
+}
+
+.forgot-link {
+    margin: -15px 0 25px;
+    display: block;
+}
+
+.forgot-link a {
+    color: #FF6B35;
+    font-size: 14.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-link a:hover {
+    color: #FF8C5A;
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #FF6B35, #FF8C5A);
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #FF8C5A, #FF6B35);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.container p {
+    font-size: 14.5px;
+    margin: 20px 0;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .container {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .left-side,
+    .form-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    
+    .left-side {
+        order: 1;
+    }
+    
+    .form-box {
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .container h1 {
+        font-size: 28px;
+    }
+    
+    .left-side h2 {
+        font-size: 32px;
+    }
+    
+    .btn {
+        height: 45px;
+    }
+    
+    .input-box input {
+        padding: 12px 45px 12px 15px;
+        font-size: 14px;
+    }
+}
